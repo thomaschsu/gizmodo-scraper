@@ -1,1 +1,1 @@
-# news-scrapper
+# Techspot-Scraper
