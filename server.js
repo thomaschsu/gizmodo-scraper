@@ -1,3 +1,4 @@
+// Required packages
 var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
@@ -22,6 +23,10 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+// Uses handlebars to create root page
+app.get('/', function (req, res) {
+  res.render('index');
+});
 
 // Use morgan logger for logging requests
 app.use(logger("dev"));
