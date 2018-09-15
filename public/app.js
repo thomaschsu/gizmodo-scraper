@@ -2,7 +2,7 @@
 $.getJSON("/articles", function(data) {
   // For each one
   for (var i = 0; i < data.length; i++) {
-    // Display the apropos information on the page
+    // Display the apropriate information on the page
     $("#articles").append("<div class='card-panel grey lighten-4 black-text' data-id='" + data[i]._id + "'>" + "<div class='card-title'>" + data[i].link + "</div>" + "<br />" + data[i].summary + "</div>");
   }
 });

@@ -40,7 +40,7 @@ mongoose.connect("mongodb://localhost/newsscrape", { useNewUrlParser: true });
 
 // Routes
 
-// A GET route for scraping the echoJS website
+// A GET route for scraping the gizmodo
 app.get("/scrape", function(req, res) {
   // First, we grab the body of the html with request
   axios.get("http://www.gizmodo.com/").then(function(response) {
