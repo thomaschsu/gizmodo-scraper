@@ -3,7 +3,7 @@ $.getJSON("/articles", function(data) {
   // For each one
   for (var i = 0; i < data.length; i++) {
     // Display the apropriate information on the page
-    $("#articles").append("<div class='card-panel grey lighten-4 black-text' data-id='" + data[i]._id + "'>" + "<div class='card-title'>" + data[i].link + "</div>" + "<br />" + data[i].summary + "<br /><br />" + "<a class='waves - effect waves - light btn'>Save Article</a>" + "</div>");
+    $("#articles").append("<div class='card-panel grey lighten-4 black-text' data-id='" + data[i]._id + "'>" + "<div class='card-title'>" + data[i].link + "</div>" + "<br />" + data[i].summary + "<br /><br />" + "<a class='waves-effect waves-light btn'>Save Article</a>" + "</div>");
   }
 });
 
@@ -26,11 +26,11 @@ $(document).on("click", ".card-panel", function() {
       // The title of the article
       $("#notes").append("<h5>" + data.title + "</h5>");
       // An input to enter a new title
-      $("#notes").append("<input id='titleinput' name='title' >");
+      $("#notes").append("<input id='titleinput' name='title' placeholder='Note Title' >");
       // A textarea to add a new note body
-      $("#notes").append("<textarea id='bodyinput' name='body'></textarea>");
+      $("#notes").append("<textarea id='bodyinput' name='body' placeholder='Type note here...' class='amber lighten-4'></textarea>");
       // A button to submit a new note, with the id of the article saved to it
-      $("#notes").append("<button data-id='" + data._id + "' id='savenote'>Save Note</button>");
+      $("#notes").append("<button data-id='" + data._id + "' id='savenote' class='waves-effect waves-light btn'>Save Note</button>");
 
       // If there's a note in the article
       if (data.note) {
