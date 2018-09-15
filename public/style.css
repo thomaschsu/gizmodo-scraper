@@ -1,8 +1,7 @@
 /* Custom CSS */
 #wrapper {
      width: 1060px;
-     margin-left: auto;
-     margin-right: auto;
+     margin: 0 auto;
 }
  #articles {
      display: inline-block;
@@ -26,4 +25,10 @@
  textarea {
      height: 200px;
      font-size: 18px;
+}
+.card-panel {
+    margin-right: 10px;
+}
+.brand-logo {
+    padding-left: 20px !important;
 }

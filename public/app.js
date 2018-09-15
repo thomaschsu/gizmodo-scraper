@@ -3,13 +3,13 @@ $.getJSON("/articles", function(data) {
   // For each one
   for (var i = 0; i < data.length; i++) {
     // Display the apropos information on the page
-    $("#articles").append("<div class='card-panel grey lighten-2 white-text' data-id='" + data[i]._id + "'>" + data[i].link + "<br />" + data[i].summary + "</div>");
+    $("#articles").append("<div class='card-panel grey lighten-4 black-text' data-id='" + data[i]._id + "'>" + "<div class='card-title'>" + data[i].link + "</div>" + "<br />" + data[i].summary + "</div>");
   }
 });
 
 
-// Whenever someone clicks a p tag
-$(document).on("click", "p", function() {
+// Whenever someone clicks a card
+$(document).on("click", ".card-panel", function() {
   // Empty the notes from the note section
   $("#notes").empty();
   // Save the id from the p tag
