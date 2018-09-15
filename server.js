@@ -28,6 +28,11 @@ app.get('/', function (req, res) {
   res.render('index');
 });
 
+// Uses handlebars to render saved page
+app.get('/saved', function (req, res) {
+  res.render('saved');
+});
+
 // Use morgan logger for logging requests
 app.use(logger("dev"));
 // Use body-parser for handling form submissions
