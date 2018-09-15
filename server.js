@@ -48,17 +48,20 @@ app.get("/scrape", function(req, res) {
     var $ = cheerio.load(response.data);
 
     // Now, we grab every h2:
-    $("h1").each(function(i, element) {
+    $("article").each(function(i, element) {
       // Save an empty result object
       var result = {};
 
       // Add the text and href of every link, and save them as properties of the result object
       result.title = $(this)
-        .children("a")
+        .find("h1")
+        .text();
+      result.summary = $(this)
+        .find("p")
         .text();
       result.link = $(this)
-        .children("a")
-        .attr("href");
+        .find("a")
+        .text;
 
       // Create a new Article using the `result` object built from scraping
       db.Article.create(result)
