@@ -1,1 +1,1 @@
-# Techspot-Scraper
+# Gizmodo-Scraper
