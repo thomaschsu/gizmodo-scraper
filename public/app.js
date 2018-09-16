@@ -30,7 +30,6 @@ $(document).on("click", ".card-panel", function() {
   })
     // With that done, add the note information to the page
     .then(function(data) {
-      console.log(data);
       // The title of the article
       $("#notes").append("<h5>" + data.title + "</h5>");
       // An input to enter a new title
@@ -68,8 +67,6 @@ $(document).on("click", "#savenote", function() {
   })
     // With that done
     .then(function(data) {
-      // Log the response
-      console.log(data);
       // Empty the notes section
       $("#notes").empty();
     });
@@ -81,6 +78,7 @@ $(document).on("click", "#savenote", function() {
 
 // When you click saved article button
 $(document).on("click", "#savearticle", function () {
+  event.preventDefault();
   // Grab the id associated with the article from the submit button
   var thisId = $(this).attr("data-id");
 
@@ -107,7 +105,7 @@ $(document).on("click", "#deletearticle", function () {
   // Run a POST request to change saved to true
   $.ajax({
     method: "PUT",
-    url: "/articles/" + thisId,
+    url: "/saved/" + thisId,
     data: {
       saved: false
     }
