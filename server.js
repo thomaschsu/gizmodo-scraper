@@ -154,7 +154,7 @@ app.put("/articles/:id", function (req, res) {
   db.Article.findOneAndUpdate({ _id: req.params.id, $set:{saved:true} })
     .then(function (dbArticle) {
       // If we were able to successfully update an Article, send it back to the client
-      res.render('index');
+      res.json(dbArticle);
     });
 });
 
@@ -164,7 +164,7 @@ app.put("/saved/:id", function (req, res) {
   db.Article.findOneAndUpdate({ _id: req.params.id, $set: { saved: false } })
     .then(function (dbArticle) {
       // If we were able to successfully update an Article, send it back to the client
-      res.render('saved');
+      res.json(dbArticle);
     });
 });
 
