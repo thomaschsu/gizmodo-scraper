@@ -5,7 +5,7 @@ Welcome to Gizmodo Scraper. This website scrapes Gizmodo's feed and grabs all th
 
 - - -
 
-### Work Flow
+### Instructions
 
 1. Download the package
 2. Run "npm i"
