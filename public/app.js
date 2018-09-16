@@ -99,6 +99,7 @@ $(document).on("click", "#savearticle", function () {
 
 // When you click saved article button
 $(document).on("click", "#deletearticle", function () {
+  event.preventDefault();
   // Grab the id associated with the article from the submit button
   var thisId = $(this).attr("data-id");
 
