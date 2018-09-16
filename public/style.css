@@ -8,6 +8,12 @@
      overflow: auto;
      height: 700px;
 }
+#saved {
+    width: 70%;
+     display: inline-block;
+     overflow: auto;
+     height: 700px;
+}
  #notes {
      float: right;
      width: 30%;
