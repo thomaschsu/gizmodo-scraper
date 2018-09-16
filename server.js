@@ -148,6 +148,23 @@ app.post("/articles/:id", function (req, res) {
     });
 });
 
+// Route for saving/updating an Articles
+app.put("/articles/:id", function (req, res) {
+  // Find the article
+  db.Article.findOne({ _id: req.params.id })
+    .then(function (dbArticle) {
+      return db.Article.findOneAndUpdate({ $set:{saved: true} });
+    })
+    .then(function (dbArticle) {
+      // If we were able to successfully update an Article, send it back to the client
+      res.json(dbArticle);
+    })
+    .catch(function (err) {
+      // If an error occurred, send it to the client
+      res.json(err);
+    });
+});
+
 // Start the server
 app.listen(PORT, function () {
   console.log("App running on port " + PORT + "!");

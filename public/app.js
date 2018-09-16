@@ -86,7 +86,7 @@ $(document).on("click", "#savearticle", function () {
 
   // Run a POST request to change saved to true
   $.ajax({
-    method: "POST",
+    method: "PUT",
     url: "/articles/" + thisId,
     data: {
       saved: true
