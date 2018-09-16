@@ -82,7 +82,7 @@ $(document).on("click", "#savearticle", function () {
   // Grab the id associated with the article from the submit button
   var thisId = $(this).attr("data-id");
 
-  // Run a POST request to change saved to true
+  // Run a PUT request to change saved to true
   $.ajax({
     method: "PUT",
     url: "/articles/" + thisId,
@@ -104,7 +104,7 @@ $(document).on("click", "#deletearticle", function () {
   // Grab the id associated with the article from the submit button
   var thisId = $(this).attr("data-id");
 
-  // Run a POST request to change saved to true
+  // Run a PUT request to change saved to true
   $.ajax({
     method: "PUT",
     url: "/saved/" + thisId,
