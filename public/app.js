@@ -98,3 +98,23 @@ $(document).on("click", "#savearticle", function () {
       console.log(data);
     });
 });
+
+// When you click saved article button
+$(document).on("click", "#deletearticle", function () {
+  // Grab the id associated with the article from the submit button
+  var thisId = $(this).attr("data-id");
+
+  // Run a POST request to change saved to true
+  $.ajax({
+    method: "PUT",
+    url: "/articles/" + thisId,
+    data: {
+      saved: false
+    }
+  })
+    // With that done
+    .then(function (data) {
+      // Log the response
+      console.log(data);
+    });
+});

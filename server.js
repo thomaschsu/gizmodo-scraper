@@ -162,6 +162,20 @@ app.put("/articles/:id", function (req, res) {
     });
 });
 
+// Route for deleting an Article from saved
+app.put("/saved/:id", function (req, res) {
+  // Find the article
+  db.Article.findOneAndUpdate({ _id: req.params.id, $set: { saved: false } })
+    .then(function (dbArticle) {
+      // If we were able to successfully update an Article, send it back to the client
+      res.json(dbArticle);
+    })
+    .catch(function (err) {
+      // If an error occurred, send it to the client
+      res.json(err);
+    });
+});
+
 // Start the server
 app.listen(PORT, function () {
   console.log("App running on port " + PORT + "!");
