@@ -38,6 +38,11 @@ app.get('/saved', function (req, res) {
     });
 });
 
+// Uses handlebars to create saved articles page
+app.get('/savedarticles', function (req, res) {
+  res.render('saved');
+});
+
 // Use morgan logger for logging requests
 app.use(logger("dev"));
 // Use body-parser for handling form submissions
