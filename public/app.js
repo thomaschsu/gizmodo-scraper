@@ -7,6 +7,14 @@ $.getJSON("/articles", function(data) {
   }
 });
 
+// Grab the saved articles as a json
+$.getJSON("/saved", function (data) {
+  // For each one
+  for (var i = 0; i < data.length; i++) {
+    // Display the apropriate information on the page
+    $("#saved").append("<div class='card-panel grey lighten-4 black-text' data-id='" + data[i]._id + "'>" + "<div class='card-title'>" + data[i].link + "</div>" + "<br />" + data[i].summary + "<br /><br />" + "<a class='waves-effect waves-light btn'>Save Article</a>" + "</div>");
+  }
+});
 
 // Whenever someone clicks a card
 $(document).on("click", ".card-panel", function() {

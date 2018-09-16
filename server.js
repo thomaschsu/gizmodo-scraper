@@ -30,7 +30,12 @@ app.get('/', function (req, res) {
 
 // Uses handlebars to render saved page
 app.get('/saved', function (req, res) {
-  res.render('saved');
+  // Grab every document in the Articles collection
+  db.Article.find({ saved: true})
+    .then(function (dbArticle) {
+      // If we were able to successfully find Articles, send them back to the client
+      res.json(dbArticle);
+    });
 });
 
 // Use morgan logger for logging requests
