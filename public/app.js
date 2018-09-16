@@ -94,6 +94,7 @@ $(document).on("click", "#savearticle", function () {
     .then(function (data) {
       // Log the response
       console.log(data);
+      location.reload();
     });
 });
 
@@ -115,5 +116,6 @@ $(document).on("click", "#deletearticle", function () {
     .then(function (data) {
       // Log the response
       console.log(data);
+      location.reload();
     });
 });
