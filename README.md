@@ -17,13 +17,20 @@ Welcome to Gizmodo Scraper. This website scrapes Gizmodo's feed and grabs all th
 
 ![Image 01](/images/image01.gif)
 
-   - - -
+- - -
 
-   ### Skills Used
-   1. JavaScript
-   2. Express
-   3. Mongoose
-   4. Handlebars
-   5. Cheerio
-   6. NPM
-   7. CLI
+### Skills Used
+1. JavaScript
+2. Express
+3. Mongoose
+4. Handlebars
+5. Cheerio
+6. NPM
+7. CLI
+
+- - -
+
+### To Do
+- Style Main / Saved Page
+- Add Bootloader for scraping
+- Hide Notes block
