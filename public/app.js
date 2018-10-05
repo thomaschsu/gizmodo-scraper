@@ -35,9 +35,9 @@ $(document).on("click", ".card-panel", function() {
       // An input to enter a new title
       $("#notes").append("<input id='titleinput' name='title' placeholder='Note Title' >");
       // A textarea to add a new note body
-      $("#notes").append("<textarea id='bodyinput' name='body' placeholder='Type note here...' class='amber lighten-4'></textarea>");
+      $("#notes").append("<textarea id='bodyinput' name='body' placeholder='Type note here...'></textarea>");
       // A button to submit a new note, with the id of the article saved to it
-      $("#notes").append("<button data-id='" + data._id + "' id='savenote' class='waves-effect waves-light btn'>Save Note</button>");
+      $("#notes").append("<button data-id='" + data._id + "' id='savenote' class='waves-effect waves-light btn green'>Save Note</button>");
 
       // If there's a note in the article
       if (data.note) {
