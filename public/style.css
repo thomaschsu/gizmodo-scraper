@@ -5,6 +5,10 @@
     margin: 0 auto;
 }
 
+#articles {
+    height: 700px;
+}
+
 #saved {
     width: 70%;
     display: inline-block;
@@ -36,7 +40,8 @@ textarea {
     margin-right: 10px;
 }
 
-.card-panel:hover, #notes:hover {
+.card-panel:hover,
+#notes:hover {
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);
