@@ -93,7 +93,7 @@ app.get("/scrape", function (req, res) {
 // Route for deleting articles from DB
 app.get("/delete", function (req, res) {
   // Remove every article
-  db.Article.remove({}).then(function () {
+  db.Article.deleteMany({}).then(function () {
     res.render('index');
   });
 });
