@@ -151,7 +151,7 @@ app.post("/articles/:id", function (req, res) {
 // Route for saving/updating an Articles
 app.put("/articles/:id", function (req, res) {
   // Find the article
-  db.Article.findOneAndUpdate({ _id: req.params.id, $set:{saved:true} })
+  db.Article.findOneAndUpdate({ _id: req.params.id }, { saved: true })
     .then(function (dbArticle) {
       // If we were able to successfully update an Article, send it back to the client
       res.json(dbArticle);
@@ -161,7 +161,7 @@ app.put("/articles/:id", function (req, res) {
 // Route for deleting an Article from saved
 app.put("/saved/:id", function (req, res) {
   // Find the article
-  db.Article.findOneAndUpdate({ _id: req.params.id, $set: { saved: false } })
+  db.Article.findOneAndUpdate({ _id: req.params.id }, { saved: false })
     .then(function (dbArticle) {
       // If we were able to successfully update an Article, send it back to the client
       res.json(dbArticle);
