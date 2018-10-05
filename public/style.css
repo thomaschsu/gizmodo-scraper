@@ -5,8 +5,9 @@
     margin: 0 auto;
 }
 
-#articles {
-    height: 700px;
+footer {
+    position: relative;
+    top: 700px;
 }
 
 #saved {
